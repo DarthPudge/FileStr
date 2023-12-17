@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "function.h"
 
-void StrCat(char* str1_, const char* str2_)
+char* StrCat(char* str1_, const char* str2_)
 {
     while (*str1_) {
         str1_++;
@@ -15,7 +15,7 @@ void StrCat(char* str1_, const char* str2_)
     }
     *str1_ = '\0';
 }
-void CopyStr(char* str1_, char* str2_)
+char* CopyStr(char* str1_, char* str2_)
 {
     while (*str1_)
     {
@@ -32,7 +32,7 @@ int StrLen(char* str_)
     return n;
 }
 
-void StrCmp(const char* str1, const char* str2)
+char* StrCmp(const char* str1, const char* str2)
 {
     int count = 0;
 
@@ -57,4 +57,28 @@ void StrCmp(const char* str1, const char* str2)
         }
     }
 }
+char* strStr(char* str1_, char* str2_){
+    int i = 0;
+    while (*str1_ != '\0')
+    {
+        if (*str2_ == '\0')
+        {
+            return str1_;
+        }
+        const char* p1 = str1_;
+        const char* p2 = str2_;
+        while (*p1 == *p2 && *p2 != '\0')
+        {
+            p1++;
+            p2++;
+        }
+        if (*p2 == '\0')
+        {
+            return str1_;
+        }
+        ++str1_;
+    }
+    return NULL;
+}
+
 

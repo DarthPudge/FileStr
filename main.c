@@ -4,54 +4,61 @@
 
 FILE* file1, * file2;
 
-int main() 
-{
-            //ГђГ ГЎГ®ГІГ  Г± Г”Г Г©Г«Г®Г¬ <>.
+int main()
+{  
+   
+    //Работа с Файлом <>.
 //
-    FILE* file = NULL;
-    fopen_s(&file, "file.txt", "r+");
-    if (!file) {
-        perror("f == NULL!");
-        return 1;
-    }
-    // Р—Р°РїРёСЃСЊ РІ С„Р°Р№Р»
-    fputs("Niggers\n", file);
+    //FILE* file;
+    //errno_t err;
 
-    // Р—Р°РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°
-    fclose(file);
+    //// Открытие файла для записи
+    //err = fopen_s(&file, "file.txt", "w");
+    //if (err != 0) {
+    //    printf("Error");
+    //    return err;
+    //}
+    //// Запись в файл
+    //fputs("Niggers\n", file);
 
-                // ГђГ ГЎГ®ГІГ  Г±Г® Г±ГІГ°Г®ГЄГ Г¬ГЁ<>.
-    //1) Г„Г«ГЁГ­Г  Г±ГІГ°Г®ГЄГЁ <strlen>.
+    //// Закрытие файла
+    //fclose(file);
+
+                // Работа со строками<>.
+    //1) Длина строки <strlen>.
 //
-     
+
     /*const char str[] = "ISeeDeadPeople";
     size_t length = StrLen(str);
     printf("String length: %zu \n", length);*/
 
-    //2) Г‘Г°Г ГўГ­ГҐГ­ГЁГҐ Г±ГІГ°Г®ГЄ <strcmp>
+    //2) Сравнение строк <strcmp>
 //
     /*char* str1 = "Zxc";
     char* str2 = "Ghoul";
     StrCmp(str1, str2);*/
 
-    //3) ГЋГЎГєГҐГ¤ГЁГ­ГҐГ­ГЁГҐ Г±ГІГ°Г®ГЄ <StrCat>
+    //3) Объединение строк <StrCat>
 // 
     /*char str1[30] = "ZXC";
     char str2[] = "GHOUL";
     StrCat(str1, str2);
     printf("%s\n", str1);*/
 
-    //4) ГЉГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ Г±ГІГ°Г®ГЄ <CopyStr>
+    //4) Копирование строк <CopyStr>
 //
     /*char str1[] = "ZXC";
     char str2[100];
     CopyStr(str1, str2);
-    printf("%s\n", str2);*/ 
-    
-    //5) ГЏГҐГ°ГўГ®ГҐ ГўГµГ®Г¦Г¤ГҐГ­ГЁГҐ <strstr>
+    printf("%s\n", str2);*/
+
+    //5) Первое вхождение <strstr>
 //
-    /*char str[] = "I am the best mider, but there is a caveat: I only play on supports";
-    printf("%s\n", strstr(str, "I only"));*/
+    char str1[] = "i am the best mider, but there is a caveat: i only play on supports";
+    char str2[] = "i only";
+    printf("%s\n", strStr(str1, str2));
+    
     //printf("Lengt Str: %d", StrLen(str));
     return 0;
 }
+    

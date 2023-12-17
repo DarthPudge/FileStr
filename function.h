@@ -6,13 +6,13 @@
 * @param str1_: Первая строка
 * @param str2_: Вторая строка
 */
-void StrCat(char* str1_, const char* str2_);
+char* StrCat(char* str1_, const char* str2_);
 /*
 * @breaf функция копирования одной строки в другую
  @param str1_: Первая строка(Копируемая)
 * @param str2_: Вторая строка(Куда копируем)
 */
-void CopyStr(char* str1_, const char* str2_);
+char* CopyStr(char* str1_, const char* str2_);
 /*
 * @breaf функция копирования одной строки в другую
  @param str1_: Первая строка(Копируемая)
@@ -24,4 +24,10 @@ int StrLen(char* str_);
 * @param str1: 1-ая строка
 * @param str2: 2-ая строка
 */
-void StrCmp(const char* str1, const char* str2);
+char* StrCmp(const char* str1, const char* str2);
+/*
+* @breaf  Функция ищет первое вхождение подстроки string2 в строке string1. 
+* @param str1: 1-ая строка
+* @param str2: 2-ая строка
+*/
+char* strStr(char* str1_, char* str2_);
